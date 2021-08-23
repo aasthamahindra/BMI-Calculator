@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DetailsInput2">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bmi Calculator"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <androidx.cardview.widget.CardView
+        android:background="@color/colorLight"
+        android:id="@+id/cardView"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16000003">
+
+        <RelativeLayout
+            android:background="@color/colorLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/selectMetricH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Select Metric Unit: "
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <RadioGroup
+                android:id="@+id/radioMetricHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectMetricH"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/cmID"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_transparent"
+                    android:button="@null"
+                    android:text="CM"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/feetID"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_gradient"
+                    android:button="@null"
+                    android:text="FEET"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorLight"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/enterHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioMetricHeight"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Select Height: "
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/heightSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/enterHeight"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="165"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/addHeight"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/heightSelection"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/add"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/reduceHeight"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/heightSelection"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toRightOf="@id/addHeight"
+                android:background="@drawable/delete" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.742">
+
+        <RelativeLayout
+            android:background="@color/colorLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/selectMetric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Select Metric Unit: "
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <RadioGroup
+                android:id="@+id/radioMetricWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectMetric"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/kgID"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_transparent"
+                    android:button="@null"
+                    android:text="KG"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/poundID"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_gradient"
+                    android:button="@null"
+                    android:text="POUND"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorLight"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/enterWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioMetricWeight"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Select Weight: "
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/weightSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/enterWeight"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="50"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/addWeight"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/weightSelection"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/add"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/reduceWeight"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/weightSelection"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toRightOf="@id/addWeight"
+                android:background="@drawable/delete" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_transparent"
+        android:padding="8dp"
+        android:text="@string/calculate"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

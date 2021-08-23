@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DetailsInput">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="5dp"
+        android:text="Select Gender: "
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31">
+
+        <RadioButton
+            android:id="@+id/maleID"
+            android:layout_width="290dp"
+            android:layout_height="190dp"
+            android:background="@drawable/button_transparent"
+            android:drawableRight="@mipmap/man"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.225" />
+
+        <RadioButton
+            android:id="@+id/femaleID"
+            android:layout_width="290dp"
+            android:layout_height="190dp"
+            android:background="@drawable/button_transparent"
+            android:drawableRight="@mipmap/woman"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.604" />
+    </RadioGroup>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ageID"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLight">
+
+            <TextView
+                android:id="@+id/selectAgeID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Select Age: "
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.76" />
+
+            <TextView
+                android:id="@+id/ageSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectAgeID"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="19"
+                android:textColor="@android:color/black"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/addAge"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/ageSelection"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/add"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/reduceAge"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/ageSelection"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/addAge"
+                android:background="@drawable/delete"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/button_transparent"
+        android:drawableRight="@mipmap/nextbtn"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

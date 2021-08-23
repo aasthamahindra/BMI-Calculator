@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="login">Sign in</string>
+    <string name="signup">Signup</string>
+    <string name="enterEmail">Enter email</string>
+    <string name="enterPassword">Enter password</string>
+    <string name="calculate">Calculate BMI</string>
+</resources>
